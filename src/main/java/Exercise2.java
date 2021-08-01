@@ -10,7 +10,13 @@ public class Exercise2 {
         System.out.print("What is the input string? ");
         Scanner input = new Scanner(System.in);
         String str = input.nextLine();
-        int len = str.length();
-        System.out.printf("%s has %d characters.", str, len);
+        if (str.isBlank()) {
+            System.out.println("You must enter something into the the program!"); // challenge component
+        }
+        else {
+            int len = str.length();
+            System.out.printf("%s has %d characters.", str, len);
+        }
+
     }
 }
